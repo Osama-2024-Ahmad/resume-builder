@@ -9,7 +9,7 @@ export default function APIKeyInitializer() {
     useEffect(() => {
         // Auto-set the API key from environment variable if not already set
         if (!apiKey) {
-            const envKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+            const envKey = process.env.NEXT_PUBLIC_OPENAI_KEY;
             if (envKey) {
                 setApiKey(envKey);
                 console.log("API key initialized from environment");

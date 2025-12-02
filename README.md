@@ -52,7 +52,7 @@ pnpm install
 3. Set up environment variables (optional for AI features):
 Create a `.env.local` file in the root directory:
 ```env
-NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+NEXT_PUBLIC_OPENAI_KEY=your_openai_api_key_here
 ```
 
 4. Run the development server:
