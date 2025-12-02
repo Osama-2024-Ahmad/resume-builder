@@ -36,7 +36,7 @@ A modern, interactive web application for building ATS-friendly resumes with rea
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/resume-builder.git
+git clone https://github.com/Osama-2024-Ahmad/resume-builder.git
 cd resume-builder
 ```
 
@@ -207,7 +207,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - UI components from [Radix UI](https://www.radix-ui.com/)
 - Icons from [Lucide](https://lucide.dev/)
 - AI powered by [Google Gemini](https://ai.google.dev/)
-
-## 📧 Contact
-
 
