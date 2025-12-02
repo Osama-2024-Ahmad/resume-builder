@@ -1,10 +1,13 @@
 export async function generateContent(apiKey: string, prompt: string) {
     try {
+        console.log("Making API request to OpenRouter...");
         const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json',
+                'HTTP-Referer': typeof window !== 'undefined' ? window.location.origin : '',
+                'X-Title': 'Resume Builder'
             },
             body: JSON.stringify({
                 model: 'openai/gpt-3.5-turbo',
@@ -17,11 +20,16 @@ export async function generateContent(apiKey: string, prompt: string) {
             })
         });
 
+        console.log("API Response Status:", response.status, response.statusText);
+
         if (!response.ok) {
-            throw new Error(`API request failed: ${response.statusText}`);
+            const errorData = await response.json().catch(() => ({}));
+            console.error("API Error Response:", errorData);
+            throw new Error(`API request failed (${response.status}): ${errorData.error?.message || response.statusText}`);
         }
 
         const data = await response.json();
+        console.log("API Response received successfully");
         return data.choices[0].message.content;
     } catch (error) {
         console.error("Error generating content:", error);
