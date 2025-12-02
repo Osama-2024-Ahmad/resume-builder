@@ -39,6 +39,7 @@ export default function AIButton({ prompt, onGenerate, label = "Generate with AI
 
         setLoading(true);
         try {
+            console.log("Generating content with API key:", keyToUse ? "Present" : "Missing");
             const text = await generateContent(keyToUse, prompt);
             onGenerate(text);
             if (tempKey) {
@@ -46,7 +47,9 @@ export default function AIButton({ prompt, onGenerate, label = "Generate with AI
                 setTempKey("");
             }
         } catch (error) {
-            alert("Failed to generate content. Please check your API key.");
+            console.error("AI Generation Error:", error);
+            const errorMessage = error instanceof Error ? error.message : "Unknown error";
+            alert(`Failed to generate content. Please check your API key.\n\nError: ${errorMessage}`);
             setOpen(true);
         } finally {
             setLoading(false);
