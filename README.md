@@ -2,6 +2,10 @@
 
 A modern, interactive web application for building ATS-friendly resumes with real-time preview, AI-powered content generation, and professional templates.
 
+## 🌐 Live Demo
+
+Check out the live demo here: [https://resume-builder-sand-eight.vercel.app/](https://resume-builder-sand-eight.vercel.app/)
+
 ## ✨ Features
 
 ### Core Functionality
