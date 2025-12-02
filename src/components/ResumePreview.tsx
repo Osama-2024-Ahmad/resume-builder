@@ -124,7 +124,7 @@ export default function ResumePreview() {
                                         <div className="flex flex-col gap-0.5 mt-1">
                                             {project.link && (
                                                 <div className="text-xs text-blue-600">
-                                                    <span className="font-medium">Link: </span>
+                                                    <span className="font-medium">Live-demo: </span>
                                                     <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline break-all">
                                                         {project.link}
                                                     </a>
