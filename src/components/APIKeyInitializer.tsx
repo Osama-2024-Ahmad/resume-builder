@@ -7,11 +7,13 @@ export default function APIKeyInitializer() {
     const { apiKey, setApiKey } = useResumeStore();
 
     useEffect(() => {
-        // Auto-set the API key if not already set
+        // Auto-set the API key from environment variable if not already set
         if (!apiKey) {
-            const defaultKey = "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";
-            setApiKey(defaultKey);
-            console.log("API key initialized");
+            const envKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+            if (envKey) {
+                setApiKey(envKey);
+                console.log("API key initialized from environment");
+            }
         }
     }, [apiKey, setApiKey]);
 
