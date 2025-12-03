@@ -6,6 +6,14 @@ A modern, interactive web application for building ATS-friendly resumes with rea
 
 Check out the live demo here: [https://resume-builder-sand-eight.vercel.app/](https://resume-builder-sand-eight.vercel.app/)
 
+## 📸 Screenshots
+
+![Landing Page](public/screenshots/landing-page.png)
+*Landing Page - Clean and modern interface*
+
+![Builder Interface](public/screenshots/builder-page.png)
+*Builder Interface - Real-time preview and easy-to-use forms*
+
 ## ✨ Features
 
 ### Core Functionality
