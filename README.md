@@ -2,6 +2,8 @@
 
 A modern, interactive web application for building ATS-friendly resumes with real-time preview, AI-powered content generation, and professional templates.
 
+Users can also utilize **Resume Checker AI** by clicking on the "ATS Score Checker" button. This intelligent tool is designed to help job seekers optimize their resumes by analyzing your CV against a specific Job Description (JD) to provide actionable feedback, an ATS compatibility score, and personalized recommendations.
+
 ## 🌐 Live Demo
 
 Check out the live demo here: [https://resume-builder-sand-eight.vercel.app/](https://resume-builder-sand-eight.vercel.app/)
